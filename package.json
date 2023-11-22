@@ -2,15 +2,22 @@
   "name": "electron-gb",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app/main/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "electron ."
+    "start:main": "electron .",
+    "start:renderer": "cd app/renderer/src/my-app && pnpm dev"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^27.0.2"
+    "electron": "^27.0.2",
+    "electron-debug": "^3.2.0",
+    "electron-is-dev": "^2.0.0",
+    "electron-reloader": "^1.2.3"
+  },
+  "dependencies": {
+    "robotjs": "^0.6.0"
   }
 }
